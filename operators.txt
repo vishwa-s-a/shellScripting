@@ -1,0 +1,2 @@
+* the following link can be used for refereing to notes on operators
+https://www.tutorialspoint.com/unix/unix-basic-operators.htm 
