@@ -1,0 +1,13 @@
+* every bash code file should start with #! /bin/bash, as it includes the path of the bash's binary file so shell comes to know that it is .sh file
+* to compile and run  a file we use the command bash fileName.sh
+* 
+* symbols used for output redirection:
+i) > symbol to write to a file
+ii) >> symbol to append to a file
+* echo $?   command shows the status of the last operation
+* in terminal if it is given [ hello = hello ]
+  then the status of the operation will be 0
+  if it is given [ hello = helo ]
+  then the status of the operation will be 1
+  we can check the status of the operation using echo $? command
+
