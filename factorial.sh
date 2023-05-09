@@ -15,7 +15,7 @@ factorial(){
 echo Enter the number
 read num
 factorial num
-#calling the function anothe time
+#calling the function another time
 echo Enter another number
 read num
 factorial num

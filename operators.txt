@@ -1,2 +1,22 @@
-* the following link can be used for refereing to notes on operators
+* the following link can be used for refering to notes on operators
 https://www.tutorialspoint.com/unix/unix-basic-operators.htm 
+
+* Arithmetic operators:
++,-,/,%,*,
+= is for assignment
+== is for equality
+!= is for non-equality
+
+* Relational operators
+-eq : equal
+-ne : not equal
+-lt : less than
+-le : less than or equal
+-gt : greater than
+-ge : greater than or equal
+
+
+* Boolean operators
+! : logical negation
+-o : logical or
+-a : logical and
