@@ -2,13 +2,13 @@
 
 echo Enter the number for printing the pattern: 
 read num
+
+echo Printing the number is increasing order:
 for((i=1;i<=num;i++))
 do
-    temp=$num
-    for((j=0;j<i;j++))
+    for((j=1;j<=i;j++))
     do
-        temp2=$((temp-j))
-        echo -n "$temp2 "
+        echo -n "$j "
     done
-    echo " "
+    echo ' '
 done

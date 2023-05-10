@@ -3,16 +3,20 @@
 echo Enter the number
 read num
 
-for((i=1;i<num;i++))
+for((i=0;i<num;i++))
 do
-    for((j=0;j<i;j++))
+    temp=$((num-i))
+    for((j=temp;j>0;j--))
     do
-        if [ $j -eq 0 ] ; then
-        echo -n "*"
+        if [ $j -eq $temp ]; then
+
+            for((k=0;k<i;k++))
+            do
+                echo -n "  "
+            done
+
         fi
-        echo -n -e "\t*"
-        if [ $j -eq $((i-1)) ]; then
-        echo -e "\n"
-        fi
+        echo -n "* "
     done
+    echo " "
 done
