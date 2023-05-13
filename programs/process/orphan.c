@@ -7,7 +7,8 @@
 
 int main(){
     //create a child process
-    int pid =fork();
+    pid_t pid;
+    pid =fork();
 
     if(pid>0)
     {
@@ -22,6 +23,9 @@ int main(){
         sleep(10);
         printf("in child process");
     }
+
+    else
+    printf("Process creation failed\n");
 
     return 0;
 }
