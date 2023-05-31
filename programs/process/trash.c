@@ -2,38 +2,30 @@
 #include<stdbool.h>
 #include<string.h>
 #include<stdlib.h>
- 
-void swap(int *a, int *b)
+struct Process{
+    int pid;
+    int at;
+    int bt;
+    int ct;
+};
+typedef struct Process Process;
+void fcfs(Process process[],int n)
 {
-    int temp;
-    temp=*a;
-    *a=*b;
-    *b=temp;
-}
-void sort(int num[], int n)
-{
-    int temp;
-    for(int i=1;i<n;i++)
+    int currentTime=0;
+    for(int i=0;i<n;i++)
     {
-        for(int j=i-1;j>=0;j--)
-        {
-            if(num[j+1]<num[j])
-            {
-                swap(&num[j],&num[j+1]);
-            }
-        }
+        currentTime+=process[i].bt;
+        process[i].ct=currentTime;
     }
-
-    printf("printing the sorted array: \n");
-    for (int v = 0;v < n; v++)
+    printf("tt\twt\n");
+    for(int i=0;i<n;i++)
     {
-        printf("%d ",num[v]);
+        int temp=process[i].ct-process[i].at;
+        printf("%d\t%d\n",temp,temp-process[i].bt);
     }
-    printf("\n");
 }
 int main(){
-int num[]={29,72,98,13,87,66,52,51,36};
-int n=sizeof(num)/sizeof(num[0]);
-sort(num,n);
+    Process process[]={{1,0,24},{2,0,3},{3,0,3}};
+    fcfs(process,3);
 return 0;
 }
