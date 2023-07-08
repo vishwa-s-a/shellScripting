@@ -20,7 +20,7 @@ void display(int num[], int n)
 }
 
 
-int find(int queue[],int head,int n)
+int find(int queue[],int head,int n, int direction)
 {
     int size=n;
     int temp[size];
@@ -33,10 +33,26 @@ int find(int queue[],int head,int n)
     int min=temp[0];
     for(int i=0;i<size;i++)
     {
-        if(temp[i]<min)
+         if(direction)//right direction
         {
-            swap(&temp[i],&min);
-            head_index=i;
+            if(queue[i]>head)
+            {
+                if(temp[i]<min)
+                {
+                    min=temp[i];
+                    head_index=i;
+                }
+            }
+        }
+        else{//left direction
+            if(queue[i]<head)
+            {
+                if(temp[i]<min)
+                {
+                    min=temp[i];
+                    head_index=i;
+                }
+            }
         }
     }
     return head_index;
@@ -44,7 +60,7 @@ int find(int queue[],int head,int n)
 int  scan(int queue[],int direction, int head, int n)
 {
 
-    int index=find(queue,head,n);
+    int index=find(queue,head,n,direction);
     int temp[n];
     int total_st=0,i=0,j=0;
     if(direction==1)//right side rotation
