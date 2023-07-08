@@ -65,11 +65,11 @@ int  scan(int queue[],int direction, int head, int n)
     int total_st=0,i=0,j=0;
     if(direction==1)//right side rotation
     {
-        for(i=index+1;i<n;i++)
+        for(i=index;i<n;i++)
         {
             temp[j++]=queue[i];
         }
-        for(i=0;i<=index;i++)
+        for(i=0;i<index;i++)
         {
             temp[j++]=queue[i];
         }
