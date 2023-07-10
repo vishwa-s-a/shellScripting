@@ -86,7 +86,6 @@ int  scan(int queue[],int direction, int head, int n)
             temp[j++]=queue[i];
         }
     }
-    display(temp,n);
     for (int i = 0; i < n; i++) {
         total_st += abs(head - temp[i]);
         head = temp[i];
@@ -125,7 +124,6 @@ int main() {
         }
     min=queue[0];
     max=queue[n-1];
-    printf("max and min %d %d\n",max,min);
     total_seek=scan(queue,direction,head,n);
     total_seek +=2*min;
     total_seek +=2*(199-max);
