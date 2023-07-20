@@ -78,10 +78,6 @@ void lru(int arr[] ,int n, int num)
         }
         else{
             int index=find(arr,frames,n,num,i);
-            if(index==-1)
-            {
-                index=i;
-            }
             frames[index]=current;
             fault++;
             printf("page fault: %d\n",current);
